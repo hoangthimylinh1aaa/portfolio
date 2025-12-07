@@ -39,32 +39,18 @@
     }
   },
   "projects": {
-    "title": "Dự Án Của Tôi",
-    "ecommerce": {
-      "title": "Website Thương Mại Điện Tử",
-      "description": "Xây dựng với SvelteKit và Stripe"
-    },
-    "taskManager": {
-      "title": "Quản Lý Công Việc",
-      "description": "Ứng dụng năng suất với kéo thả"
-    },
-    "weather": {
-      "title": "Ứng Dụng Thời Tiết",
-      "description": "Thời tiết thời gian thực sử dụng API"
-    },
-    "portfolio": {
-      "title": "Website Portfolio",
-      "description": "Portfolio cá nhân với hiệu ứng động"
-    },
-    "blog": {
-      "title": "Nền Tảng Blog",
-      "description": "Hệ thống blog dựa trên Markdown"
-    },
-    "chat": {
-      "title": "Ứng Dụng Trò Chuyện",
-      "description": "Ứng dụng nhắn tin thời gian thực"
-    },
-    "viewProject": "Xem Dự Án"
+    "projects": {
+      "title": "Dự Án Của Tôi",
+      "viewProject": "Xem Chi Tiết",
+      "viewLive": "Xem Demo",
+      "backToProjects": "← Quay Lại Dự Án",
+      "position": "Vị Trí",
+      "teamSize": "Quy Mô Nhóm",
+      "technologies": "Công Nghệ",
+      "responsibilities": "Trách Nhiệm",
+      "projectDescription": "Mô Tả Dự Án",
+      "people": "người"
+    }
   },
   "contact": {
     "title": "Liên Hệ",

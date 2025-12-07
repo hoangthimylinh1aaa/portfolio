@@ -130,61 +130,7 @@
                     </div>
                 </Motion>
 
-                <!-- Education Section -->
-                <section class="mb-16">
-                    <Motion
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.7, delay: 0.3 }}
-                            let:motion
-                    >
-                        <h2
-                                use:motion
-                                class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-cyan-400 mb-8 uppercase tracking-wide flex items-center gap-3"
-                        >
-                            <span class="text-cyan-500">🎓</span>
-                            {$_('about.education')}
-                        </h2>
-                    </Motion>
 
-                    {#each educationKeys as eduKey, eduIndex}
-                        <Motion
-                                initial={{ opacity: 0, x: -30 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.6, delay: 0.4 + eduIndex * 0.1 }}
-                                let:motion
-                        >
-                            <div use:motion class="card-gaming  hover:border-cyan-300 transition-colors">
-                                <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-4">
-                                    <div class="flex-1">
-                                        <h3 class="text-2xl md:text-3xl font-display font-bold text-cyan-300 mb-2">
-                                            {$_(`about.educationData.${eduKey}.institution`)}
-                                        </h3>
-                                        <p class="text-purple-400 font-gaming font-semibold text-lg">
-                                            {$_(`about.educationData.${eduKey}.degree`)}
-                                        </p>
-                                    </div>
-                                    <div
-                                            class="px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/50 rounded-lg w-fit"
-                                    >
-                                        <p class="text-cyan-300 font-gaming font-semibold text-sm whitespace-nowrap">
-                                             {$_(`about.educationData.${eduKey}.period`)}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <ul class="space-y-3 mt-6">
-                                    {#each $_(`about.educationData.${eduKey}.description`) as desc}
-                                        <li class="text-cyan-100 font-gaming flex items-start gap-3 text-sm md:text-base">
-                                            <span class="text-cyan-400 text-xl">▸</span>
-                                            <span class="flex-1">{desc}</span>
-                                        </li>
-                                    {/each}
-                                </ul>
-                            </div>
-                        </Motion>
-                    {/each}
-                </section>
 
                 <!-- Skills Section -->
                 <section class="mb-16">
@@ -248,6 +194,62 @@
                             {/if}
                         {/each}
                     </div>
+                </section>
+
+                <!-- Education Section -->
+                <section class="mb-16">
+                    <Motion
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.7, delay: 0.3 }}
+                            let:motion
+                    >
+                        <h2
+                                use:motion
+                                class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-cyan-400 mb-8 uppercase tracking-wide flex items-center gap-3"
+                        >
+                            <span class="text-cyan-500">🎓</span>
+                            {$_('about.education')}
+                        </h2>
+                    </Motion>
+
+                    {#each educationKeys as eduKey, eduIndex}
+                        <Motion
+                                initial={{ opacity: 0, x: -30 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.6, delay: 0.4 + eduIndex * 0.1 }}
+                                let:motion
+                        >
+                            <div use:motion class="card-gaming  hover:border-cyan-300 transition-colors">
+                                <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-4">
+                                    <div class="flex-1">
+                                        <h3 class="text-2xl md:text-3xl font-display font-bold text-cyan-300 mb-2">
+                                            {$_(`about.educationData.${eduKey}.institution`)}
+                                        </h3>
+                                        <p class="text-purple-400 font-gaming font-semibold text-lg">
+                                            {$_(`about.educationData.${eduKey}.degree`)}
+                                        </p>
+                                    </div>
+                                    <div
+                                            class="px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/50 rounded-lg w-fit"
+                                    >
+                                        <p class="text-cyan-300 font-gaming font-semibold text-sm whitespace-nowrap">
+                                            {$_(`about.educationData.${eduKey}.period`)}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <ul class="space-y-3 mt-6">
+                                    {#each $_(`about.educationData.${eduKey}.description`) as desc}
+                                        <li class="text-cyan-100 font-gaming flex items-start gap-3 text-sm md:text-base">
+                                            <span class="text-cyan-400 text-xl">▸</span>
+                                            <span class="flex-1">{desc}</span>
+                                        </li>
+                                    {/each}
+                                </ul>
+                            </div>
+                        </Motion>
+                    {/each}
                 </section>
             </div>
         </div>

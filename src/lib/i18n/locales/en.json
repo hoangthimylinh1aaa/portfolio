@@ -40,31 +40,15 @@
   },
   "projects": {
     "title": "My Projects",
-    "ecommerce": {
-      "title": "E-commerce Site",
-      "description": "Built with SvelteKit and Stripe"
-    },
-    "taskManager": {
-      "title": "Task Manager",
-      "description": "Productivity app with drag-and-drop"
-    },
-    "weather": {
-      "title": "Weather App",
-      "description": "Real-time weather using API"
-    },
-    "portfolio": {
-      "title": "Portfolio Site",
-      "description": "Personal portfolio with animations"
-    },
-    "blog": {
-      "title": "Blog Platform",
-      "description": "Markdown-based blog system"
-    },
-    "chat": {
-      "title": "Chat Application",
-      "description": "Real-time messaging app"
-    },
-    "viewProject": "View Project"
+    "viewProject": "View Details",
+    "viewLive": "View Live",
+    "backToProjects": "← Back to Projects",
+    "position": "Position",
+    "teamSize": "Team Size",
+    "technologies": "Technologies",
+    "responsibilities": "Responsibilities",
+    "projectDescription": "Project Description",
+    "people": "people"
   },
   "contact": {
     "title": "Get In Touch",

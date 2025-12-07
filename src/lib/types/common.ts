@@ -1,6 +1,15 @@
 export interface Project {
-  key: string;
-  link: string;
+  id: string;
+  title: string;
+  position: string;
+  description: string;
+  teamSize: number;
+  technologies: string[];
+  responsibilities: string[];
+  link?: string;
+  image?: string;
+  startDate?: string;
+  endDate?: string;
 }
 
 export type Locale = 'en' | 'vi';
