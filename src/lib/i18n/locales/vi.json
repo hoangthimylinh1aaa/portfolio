@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "home": "Trang Chủ",
+    "about": "Giới Thiệu",
+    "projects": "Dự Án",
+    "contact": "Liên Hệ"
+  },
+  "home": {
+    "greeting": "Xin chào, tôi là",
+    "title": "Nhà Phát Triển Front-End | Yêu Thích UI/UX | Đam Mê AI",
+    "viewProjects": "Xem Dự Án",
+    "contactMe": "Liên Hệ Tôi"
+  },
+  "about": {
+    "title": "Giới Thiệu",
+    "description": "Tôi là một nhà phát triển front-end đam mê với chuyên môn về các công nghệ web hiện đại bao gồm SvelteKit, React và Tailwind CSS.",
+    "skills": "Kỹ Năng"
+  },
+  "projects": {
+    "title": "Dự Án Của Tôi",
+    "ecommerce": {
+      "title": "Website Thương Mại Điện Tử",
+      "description": "Xây dựng với SvelteKit và Stripe"
+    },
+    "taskManager": {
+      "title": "Quản Lý Công Việc",
+      "description": "Ứng dụng năng suất với kéo thả"
+    },
+    "weather": {
+      "title": "Ứng Dụng Thời Tiết",
+      "description": "Thời tiết thời gian thực sử dụng API"
+    },
+    "portfolio": {
+      "title": "Website Portfolio",
+      "description": "Portfolio cá nhân với hiệu ứng động"
+    },
+    "blog": {
+      "title": "Nền Tảng Blog",
+      "description": "Hệ thống blog dựa trên Markdown"
+    },
+    "chat": {
+      "title": "Ứng Dụng Trò Chuyện",
+      "description": "Ứng dụng nhắn tin thời gian thực"
+    },
+    "viewProject": "Xem Dự Án"
+  },
+  "contact": {
+    "title": "Liên Hệ",
+    "name": "Tên",
+    "email": "Email",
+    "message": "Tin Nhắn",
+    "send": "Gửi Tin Nhắn"
+  }
+}

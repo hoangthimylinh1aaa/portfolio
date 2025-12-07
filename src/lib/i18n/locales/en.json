@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hi, I'm",
+    "title": "Front-End Developer | UI/UX Lover | AI Enthusiast",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm a passionate front-end developer with expertise in modern web technologies including SvelteKit, React, and Tailwind CSS.",
+    "skills": "Skills"
+  },
+  "projects": {
+    "title": "My Projects",
+    "ecommerce": {
+      "title": "E-commerce Site",
+      "description": "Built with SvelteKit and Stripe"
+    },
+    "taskManager": {
+      "title": "Task Manager",
+      "description": "Productivity app with drag-and-drop"
+    },
+    "weather": {
+      "title": "Weather App",
+      "description": "Real-time weather using API"
+    },
+    "portfolio": {
+      "title": "Portfolio Site",
+      "description": "Personal portfolio with animations"
+    },
+    "blog": {
+      "title": "Blog Platform",
+      "description": "Markdown-based blog system"
+    },
+    "chat": {
+      "title": "Chat Application",
+      "description": "Real-time messaging app"
+    },
+    "viewProject": "View Project"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message"
+  }
+}
