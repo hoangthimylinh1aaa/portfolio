@@ -13,8 +13,30 @@
   },
   "about": {
     "title": "Giới Thiệu",
-    "description": "Tôi là một nhà phát triển front-end đam mê với chuyên môn về các công nghệ web hiện đại bao gồm SvelteKit, React và Tailwind CSS.",
-    "skills": "Kỹ Năng"
+    "description": "Lập trình viên Front-end với hơn 5 năm kinh nghiệm xây dựng các ứng dụng web động bằng React. js (Next.js) và Svelte.  Thành thạo React, các thư viện liên quan và các công cụ hỗ trợ.  Thành thạo thiết kế giao diện thân thiện với người dùng và tối ưu hóa trải nghiệm người dùng.  Làm việc nhóm hiệu quả, giao tiếp tốt và kỹ năng quản lý dự án xuất sắc.  Luôn cập nhật xu hướng để đảm bảo các giải pháp hiệu quả đáp ứng nhu cầu của khách hàng.",
+    "skills": "Kỹ Năng",
+    "education": "Học Vấn",
+    "categories": {
+      "library": "Thư Viện",
+      "framework": "Framework",
+      "language": "Ngôn Ngữ Lập Trình",
+      "stateLibrary": "State Library",
+      "styleLibrary": "Style Library",
+      "cloud": "Cloud & DevOps",
+      "tools": "Công Cụ Khác",
+      "certification": "Chứng Chỉ"
+    },
+    "educationData": {
+      "dnu": {
+        "institution": "Đại Học Đà Nẵng",
+        "degree": "Xếp loại: Khá (Chính quy)",
+        "period": "2015 - 2019",
+        "description": [
+          "Làm việc nhóm trong nhiều dự án trong 4 năm như thuyết trình, phân tích yêu cầu, báo cáo.",
+          "Tham gia các hoạt động ngoại khóa như thể thao, văn nghệ trường học."
+        ]
+      }
+    }
   },
   "projects": {
     "title": "Dự Án Của Tôi",

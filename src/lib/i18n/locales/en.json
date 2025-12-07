@@ -7,14 +7,36 @@
   },
   "home": {
     "greeting": "Hi, I'm",
-    "title": "Front-End Developer | UI/UX Lover | AI Enthusiast",
+    "title": "Front-End Developer | UI/UX Enthusiast | AI Passionate",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me"
   },
   "about": {
     "title": "About Me",
-    "description": "I'm a passionate front-end developer with expertise in modern web technologies including SvelteKit, React, and Tailwind CSS.",
-    "skills": "Skills"
+    "description": "Front-end Developer with over 5 years of experience building dynamic web applications using React.js (Next.js) and Svelte.  Proficient in React, related libraries, and supporting tools. Expert in designing user-friendly interfaces and optimizing user experience. Effective team player with excellent communication and project management skills. Always staying updated with trends to ensure effective solutions that meet client needs.",
+    "skills": "Skills",
+    "education": "Education",
+    "categories": {
+      "library": "Library",
+      "framework": "Framework",
+      "language": "Programming Language",
+      "stateLibrary": "State Library",
+      "styleLibrary": "Style Library",
+      "cloud": "Cloud & DevOps",
+      "tools": "Other Tools",
+      "certification": "Certification"
+    },
+    "educationData": {
+      "dnu": {
+        "institution": "Da Nang University",
+        "degree": "Classification: Good (Formal)",
+        "period": "2015 - 2019",
+        "description": [
+          "Team-worked in a lot of projects for 4 years ago such as presentation, requirement analyzing, reporting.",
+          "Participate in extracurricular activities sport, school arts."
+        ]
+      }
+    }
   },
   "projects": {
     "title": "My Projects",

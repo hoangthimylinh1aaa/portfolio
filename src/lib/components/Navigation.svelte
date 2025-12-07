@@ -31,10 +31,9 @@
         let:motion
 >
     <nav use:motion class="gaming-nav w-full relative p-4 md:p-6 flex justify-between items-center mx-auto sticky top-0 z-50">
-        <h1 on:click={navigateHome}
-                class="text-2xl cursor-pointer md:text-3xl font-display font-black text-transparent bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text uppercase tracking-wider">
+        <a href="/" class="text-2xl md:text-3xl font-display font-black text-transparent bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text uppercase tracking-wider hover:opacity-80 transition-opacity">
             Portfolio
-        </h1>
+        </a>
 
         <!-- Desktop Menu -->
         <div class="hidden lg:flex items-center gap-8">
@@ -75,7 +74,7 @@
     {#if isMobileMenuOpen}
         <div
                 transition:slide={{ duration: 300 }}
-                class="absolute z-[10] top-20 left-0 right-0 lg:hidden gaming-nav border-t border-cyan-500/30 overflow-hidden shadow-lg"
+                class="absolute z-[22] top-20 left-0 right-0 lg:hidden gaming-nav border-t border-cyan-500/30 overflow-hidden shadow-lg"
         >
             <ul class="flex flex-col gap-4 p-6 font-gaming text-lg uppercase">
                 {#each menuItems as item, index}

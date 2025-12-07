@@ -5,6 +5,28 @@ export interface Project {
 
 export type Locale = 'en' | 'vi';
 
+export interface Skill {
+  name: string;
+  category: SkillCategory;
+}
+
+export interface Education {
+  institution: string;
+  degree: string;
+  period: string;
+  description: string[];
+}
+
+export type SkillCategory =
+  | 'library'
+  | 'framework'
+  | 'language'
+  | 'stateLibrary'
+  | 'styleLibrary'
+  | 'cloud'
+  | 'tools'
+  | 'certification';
+
 export interface TranslationKeys {
   nav: {
     home: string;
