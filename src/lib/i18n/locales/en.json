@@ -6,6 +6,7 @@
     "contact": "Contact"
   },
   "home": {
+    "head": "Welcome to My Portfolio",
     "greeting": "Hi, I'm",
     "title": "Front-End Developer | UI/UX Enthusiast | AI Passionate",
     "viewProjects": "View Projects",
@@ -48,13 +49,117 @@
     "technologies": "Technologies",
     "responsibilities": "Responsibilities",
     "projectDescription": "Project Description",
-    "people": "people"
+    "people": "people",
+    "items": {
+      "justSkin": {
+        "title": "JUSTSKIN",
+        "position": "Front-end Developer",
+        "description": "JUSTSKIN is a React Native mobile application tailored for dermatologists and medical professionals. It enables capturing or uploading patient skin images for accurate assessment and analysis. The app maintains detailed patient records, including treatment history and prescriptions.",
+        "teamSize": "4",
+        "technologies": ["React Native", "StyleSheet", "MobX", "TensorFlow"],
+        "responsibilities": [
+          "Build module management (forms, reusable components)",
+          "Apply TensorFlow camera AI to detect body parts",
+          "Convert Figma designs to React Native components",
+          "Integrate with APIs to get/add/update/delete patients, sessions, lesions, etc."
+        ],
+        "linkLabel": "Open App Store"
+      },
+      "bht": {
+        "title": "BHT",
+        "position": "Front-end Developer",
+        "description": "Developed high-quality, photorealistic images and videos for architecture and luxury real estate using advanced 3D technologies. Implemented detailed models, lighting and material effects, and streamlined delivery workflows.",
+        "teamSize": "6",
+        "technologies": ["Three.js", "React.js", "Redux", "Redux Toolkit", "Tailwind CSS"],
+        "responsibilities": [
+          "Build CMS gallery, customer unit management, configuration and Marzipano integration",
+          "Implement socket-based real-time sync between devices on the same account",
+          "Convert Figma to React components",
+          "Integrate with backend APIs to CRUD users, amenities, etc.",
+          "Collaborate on code reviews and improve code quality",
+          "Refactor styles from SCSS to Tailwind CSS"
+        ],
+        "linkLabel": "Open Site"
+      },
+      "nvp": {
+        "title": "NVP",
+        "position": "Front-end Developer",
+        "description": "Platform for doctors, patients, admins and super-admins with role-based access. Features appointment booking with calendar and Zoom integration, and patient management for a hospital specializing in autism-related services.",
+        "teamSize": "6",
+        "technologies": ["Next.js", "Redux", "Redux Toolkit Query", "Tailwind CSS", "TypeScript"],
+        "responsibilities": [
+          "Build calendar component",
+          "Translate Figma into Next.js components",
+          "Refactor for reusable components and optimize rendering",
+          "Improve UI/UX with hover effects, skeleton loaders and API feedback",
+          "Integrate with APIs for CRUD operations",
+          "Participate in code reviews"
+        ],
+        "linkLabel": "Open Site"
+      },
+      "assa": {
+        "title": "ASSA",
+        "position": "Front-end Developer",
+        "description": "ASSA supports workplace safety and compliance: employee induction, contractor onboarding, incident reporting, custom training courses, bulk employee uploads, and compliance reporting to improve workplace safety.",
+        "teamSize": "5",
+        "technologies": [
+          "Next.js",
+          "Redux",
+          "Redux Toolkit Query",
+          "Tailwind CSS",
+          "TanStack Table",
+          "TypeScript"
+        ],
+        "responsibilities": [
+          "Implement authentication (login, forgot password, token handling)",
+          "Convert Figma to Next.js components",
+          "Refactor and build reusable components, optimize rendering",
+          "Improve UI/UX (hover states, skeletons, loading states)",
+          "Integrate with APIs for CRUD",
+          "Set up Husky, ESLint, Prettier and improve code quality"
+        ],
+        "linkLabel": "Open Site"
+      },
+      "maker": {
+        "title": "MAKER",
+        "position": "Front-end Developer",
+        "description": "Redbrick Makers is a coding education platform for ages 6-18. It offers project-based curriculum, courses in block coding, JavaScript, Python and AI, a software builder with many assets, and an LMS for educators.",
+        "teamSize": "10",
+        "technologies": ["React.js", "React Query", "Tailwind CSS", "TypeScript"],
+        "responsibilities": [
+          "Convert Figma designs to Next.js components",
+          "Implement features (buy/sell, invite users, OAuth flows, class features)",
+          "Mentor new members",
+          "Participate in code reviews"
+        ],
+        "linkLabel": "Open Site"
+      },
+      "ivfmd-chat": {
+        "title": "IVFMD CHAT",
+        "position": "Front-end Developer",
+        "description": "IVFMD Family app provides integrated chat for patients and clinic support teams. Allows scheduling, treatment discussions and direct questions to improve the fertility treatment process.",
+        "teamSize": "10",
+        "technologies": ["React.js", "Style Components", "Redux", "Socket.io"],
+        "responsibilities": [
+          "Implement chat input (mentions, loading animations)",
+          "Handle conversation features (delete, edit, hide messages) and chat UI standardization"
+        ],
+        "linkLabel": "Open"
+      }
+    }
   },
   "contact": {
     "title": "Get In Touch",
-    "name": "Name",
+    "subtitle": "Connect with me on social media",
+    "description": "I'm always open to connecting and discussing new projects, collaboration opportunities, or just chatting about technology!",
+    "socialLinks": {
+      "linkedin": "LinkedIn",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "telegram": "Telegram"
+    },
+    "or": "Or",
     "email": "Email",
-    "message": "Message",
-    "send": "Send Message"
+    "sendEmail": "Send Email"
   }
 }

@@ -3,15 +3,11 @@
   import { _, locale } from 'svelte-i18n';
   import Navigation from '$lib/components/Navigation.svelte';
   import { projectsData } from '$lib/data/projects';
+  import { getGradientClass } from '$lib/utils/gradients';
 
-  const gradients = [
-    'from-cyan-500 via-blue-600 to-purple-500',
-    'from-purple-500 via-pink-600 to-red-500',
-    'from-green-500 via-teal-600 to-cyan-500',
-    'from-yellow-500 via-orange-600 to-red-500',
-    'from-indigo-500 via-purple-600 to-pink-500',
-    'from-blue-500 via-cyan-600 to-teal-500',
-  ];
+  function getShortLabel(id: string) {
+    return id.substring(0, 3).toUpperCase();
+  }
 </script>
 
 <svelte:head>
@@ -41,7 +37,7 @@
 
         <!-- Projects Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {#each projectsData as project, i}
+          {#each projectsData as project, i (project.id)}
             <Motion
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -50,33 +46,51 @@
               let:motion
             >
               <a
-                href="/projects/{project.id}"
+                href={`/projects/${project.id}`}
                 use:motion
                 class="card-gaming cursor-pointer group block h-full"
+                aria-label={$_(`projects. items.${project.id}.title`) || project.id}
               >
-                <!-- Project Image/Gradient -->
+                <!-- Project Image/Gradient - Use consistent gradient based on ID -->
                 <div
-                  class="h-48 bg-gradient-to-br {gradients[
-                    i % gradients.length
-                  ]} rounded-lg mb-4 relative overflow-hidden"
+                  class="h-48 bg-gradient-to-br {getGradientClass(
+                    project.id
+                  )} rounded-lg mb-4 relative overflow-hidden"
                 >
                   <div
                     class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"
                   ></div>
-                  <div class="absolute inset-0 flex items-center justify-center">
-                    <span
-                      class="text-white font-display text-5xl font-black opacity-30 group-hover:opacity-60 transition-opacity duration-300"
-                    >
-                      {project.title.substring(0, 3)}
-                    </span>
-                  </div>
+
+                  <!-- Show image if exists, otherwise show text -->
+                  {#if project.image}
+                    <div class="absolute inset-0 flex isolate items-center justify-center p-8">
+                      <img
+                        src={project.image}
+                        alt={$_(`projects.items.${project.id}.title`)}
+                        class="max-w-full max-h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                        class:mix-blend-multiply={project?.id === 'nvp' || project?.id === 'assa'}
+                      />
+                    </div>
+                  {:else}
+                    <div class="absolute inset-0 flex items-center justify-center">
+                      <span
+                        class="text-white font-display text-5xl font-black opacity-30 group-hover:opacity-60 transition-opacity duration-300"
+                      >
+                        {#if $_(`projects.items.${project.id}.title`)}
+                          {$_(`projects.items.${project.id}.title`).substring(0, 3).toUpperCase()}
+                        {:else}
+                          {getShortLabel(project.id)}
+                        {/if}
+                      </span>
+                    </div>
+                  {/if}
 
                   <!-- Position Badge -->
                   <div
                     class="absolute top-3 right-3 px-3 py-1 bg-black/60 backdrop-blur-sm rounded-full"
                   >
                     <p class="text-cyan-300 font-gaming text-xs font-semibold">
-                      {project.position}
+                      {$_(`projects.items.${project.id}.position`) || ''}
                     </p>
                   </div>
                 </div>
@@ -86,11 +100,11 @@
                   <h3
                     class="text-2xl font-display font-bold text-cyan-400 uppercase tracking-wide group-hover:text-cyan-300 transition-colors"
                   >
-                    {project.title}
+                    {$_(`projects.items.${project.id}.title`) || project.id}
                   </h3>
 
                   <p class="text-cyan-100 text-sm font-gaming line-clamp-3 leading-relaxed">
-                    {project.description}
+                    {$_(`projects.items.${project.id}.description`) || ''}
                   </p>
 
                   <!-- Technologies -->

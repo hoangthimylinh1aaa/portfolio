@@ -6,6 +6,7 @@
     "contact": "Liên Hệ"
   },
   "home": {
+    "head": "Chào Mừng Đến Với Portfolio Của Tôi",
     "greeting": "Xin chào, tôi là",
     "title": "Nhà Phát Triển Front-End | Yêu Thích UI/UX | Đam Mê AI",
     "viewProjects": "Xem Dự Án",
@@ -39,24 +40,126 @@
     }
   },
   "projects": {
-    "projects": {
-      "title": "Dự Án Của Tôi",
-      "viewProject": "Xem Chi Tiết",
-      "viewLive": "Xem Demo",
-      "backToProjects": "← Quay Lại Dự Án",
-      "position": "Vị Trí",
-      "teamSize": "Quy Mô Nhóm",
-      "technologies": "Công Nghệ",
-      "responsibilities": "Trách Nhiệm",
-      "projectDescription": "Mô Tả Dự Án",
-      "people": "người"
+    "title": "Dự Án Của Tôi",
+    "viewProject": "Xem Chi Tiết",
+    "viewLive": "Xem Demo",
+    "backToProjects": "← Quay Lại Dự Án",
+    "position": "Vị Trí",
+    "teamSize": "Quy Mô Nhóm",
+    "technologies": "Công Nghệ",
+    "responsibilities": "Trách Nhiệm",
+    "projectDescription": "Mô Tả Dự Án",
+    "people": "người",
+    "items": {
+      "justSkin": {
+        "title": "JUSTSKIN",
+        "position": "Front-end Developer",
+        "description": "JUSTSKIN là ứng dụng React Native dành cho bác sĩ da liễu và chuyên gia y tế. Ứng dụng cho phép chụp hoặc tải lên ảnh da bệnh nhân để phân tích và đánh giá chính xác. Lưu trữ hồ sơ bệnh nhân chi tiết, bao gồm lịch sử điều trị và đơn thuốc.",
+        "teamSize": "4",
+        "technologies": ["React Native", "StyleSheet", "MobX", "TensorFlow"],
+        "responsibilities": [
+          "Xây module quản lý (form, component tái sử dụng, ...)",
+          "Áp dụng camera AI từ TensorFlow để phát hiện vùng cơ thể",
+          "Chuyển thiết kế Figma sang component React Native",
+          "Kết nối API để lấy/thêm/sửa/xóa patient, session, lesion..."
+        ],
+        "linkLabel": "Mở App Store"
+      },
+      "bht": {
+        "title": "BHT",
+        "position": "Front-end Developer",
+        "description": "Phát triển hình ảnh và video chất lượng cao, chân thực cho ngành kiến trúc và bất động sản cao cấp. Sử dụng công nghệ 3D tiên tiến để tạo mô hình chi tiết, hiệu ứng ánh sáng và vật liệu tinh xảo.",
+        "teamSize": "6",
+        "technologies": ["Three.js", "React.js", "Redux", "Redux Toolkit", "Tailwind CSS"],
+        "responsibilities": [
+          "Xây module CMS gallery, quản lý unit khách hàng, cấu hình và tích hợp Marzipano",
+          "Sử dụng socket để đồng bộ thời gian thực giữa hai thiết bị cùng tài khoản",
+          "Chuyển Figma sang component React",
+          "Kết nối API để CRUD user, amenity...",
+          "Hợp tác review code và cải thiện chất lượng",
+          "Refactor SCSS sang Tailwind CSS"
+        ],
+        "linkLabel": "Mở Website"
+      },
+      "nvp": {
+        "title": "NVP",
+        "position": "Front-end Developer",
+        "description": "Hệ thống dành cho bác sĩ, bệnh nhân, admin và super-admin với phân quyền. Cho phép đặt lịch qua calendar tích hợp và Zoom, phục vụ một bệnh viện chuyên về vấn đề tự kỷ.",
+        "teamSize": "6",
+        "technologies": ["Next.js", "Redux", "Redux Toolkit Query", "Tailwind CSS", "TypeScript"],
+        "responsibilities": [
+          "Xây component calendar",
+          "Chuyển Figma sang component Next.js",
+          "Refactor để tái sử dụng component và tối ưu render",
+          "Cải thiện UI/UX: hover, skeleton, hiển thị trạng thái khi gọi API",
+          "Tích hợp API để CRUD dữ liệu",
+          "Tham gia review code"
+        ],
+        "linkLabel": "Mở Website"
+      },
+      "assa": {
+        "title": "ASSA",
+        "position": "Front-end Developer",
+        "description": "ASSA hỗ trợ an toàn lao động và tuân thủ bằng việc quản lý đào tạo nhân viên, onboarding nhà thầu và báo cáo sự cố. Hệ thống tối ưu quy trình tạo khóa đào tạo tùy chỉnh, upload dữ liệu nhân viên số lượng lớn và tạo báo cáo tuân thủ.",
+        "teamSize": "5",
+        "technologies": [
+          "Next.js",
+          "Redux",
+          "Redux Toolkit Query",
+          "Tailwind CSS",
+          "TanStack Table",
+          "TypeScript"
+        ],
+        "responsibilities": [
+          "Xử lý authentication (login, quên mật khẩu, token)",
+          "Chuyển Figma sang component Next.js",
+          "Refactor, xây component tái sử dụng, tối ưu render",
+          "Cải thiện UI/UX: hover, skeleton, trạng thái load",
+          "Kết nối API để CRUD",
+          "Thiết lập Husky, ESLint, Prettier và nâng cao chất lượng code"
+        ],
+        "linkLabel": "Mở Website"
+      },
+      "maker": {
+        "title": "MAKER",
+        "position": "Front-end Developer",
+        "description": "Redbrick Makers là nền tảng giáo dục lập trình cho học sinh 6-18 tuổi, cung cấp chương trình học dự án, khóa học block coding, JavaScript, Python và AI, cùng LMS cho giáo viên và bộ công cụ tạo phần mềm.",
+        "teamSize": "10",
+        "technologies": ["React.js", "React Query", "Tailwind CSS", "TypeScript"],
+        "responsibilities": [
+          "Chuyển Figma sang component Next.js",
+          "Xử lý tính năng (mua/bán, invite user, OAuth, chức năng lớp học...)",
+          "Mentor cho thành viên mới",
+          "Review code"
+        ],
+        "linkLabel": "Mở Website"
+      },
+      "ivfmd-chat": {
+        "title": "IVFMD CHAT",
+        "position": "Front-end Developer",
+        "description": "Ứng dụng IVFMD cung cấp chat tích hợp giữa bệnh nhân và đội hỗ trợ phòng khám, cho phép đặt lịch, thảo luận kế hoạch điều trị và hỏi đáp trực tiếp, cải thiện trải nghiệm chăm sóc sinh sản.",
+        "teamSize": "10",
+        "technologies": ["React.js", "Style Components", "Redux", "Socket.io"],
+        "responsibilities": [
+          "Xây input chat (mention user, animation khi chờ)",
+          "Xử lý conversation (xóa, sửa, ẩn tin nhắn) và chuẩn hoá giao diện chat"
+        ],
+        "linkLabel": "Mở"
+      }
     }
   },
   "contact": {
-    "title": "Liên Hệ",
-    "name": "Tên",
+    "title": "Liên Hệ Với Tôi",
+    "subtitle": "Kết nối với tôi qua các nền tảng mạng xã hội",
+    "description": "Tôi luôn sẵn sàng kết nối và thảo luận về các dự án mới, cơ hội hợp tác hoặc chỉ đơn giản là trò chuyện về công nghệ! ",
+    "socialLinks": {
+      "linkedin": "LinkedIn",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "telegram": "Telegram"
+    },
+    "or": "Hoặc",
     "email": "Email",
-    "message": "Tin Nhắn",
-    "send": "Gửi Tin Nhắn"
+    "sendEmail": "Gửi Email"
   }
 }

@@ -1,15 +1,18 @@
 export interface Project {
   id: string;
-  title: string;
-  position: string;
-  description: string;
   teamSize: number;
-  technologies: string[];
-  responsibilities: string[];
+  technologies: string[]; // keep primary technologies here for quick access
   link?: string;
   image?: string;
-  startDate?: string;
-  endDate?: string;
+}
+
+export interface SocialLink {
+  id: string;
+  name: string;
+  url: string;
+  icon: string;
+  color: string;
+  hoverColor: string;
 }
 
 export type Locale = 'en' | 'vi';
