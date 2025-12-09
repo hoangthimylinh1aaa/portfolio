@@ -1,0 +1,44 @@
+name: sveltekit-portfolio
+region: sgp
+
+services:
+  - name: web
+    # GitHub repository
+    github:
+      repo: your-username/your-repo
+      branch: main
+      deploy_on_push: true
+
+    # Sử dụng Dockerfile
+    dockerfile_path: Dockerfile
+
+    # Port  app listen
+    http_port: 3000
+
+    # Instance configuration
+    instance_count: 1
+    instance_size_slug:  basic-xxs
+
+    # Routes
+    routes:
+      - path: /
+
+    # Health check (optional)
+    health_check:
+      http_path: /
+      initial_delay_seconds: 10
+      period_seconds: 10
+      timeout_seconds: 3
+      success_threshold: 1
+      failure_threshold: 3
+
+    # Environment variables
+    envs:
+      - key: NODE_ENV
+        value: "production"
+      - key: PORT
+        value:  "3000"
+      - key: HOST
+        value:  "0.0.0.0"
+      # - key: DATABASE_URL
+      #   value: "your-database-url"
