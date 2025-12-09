@@ -3,11 +3,11 @@ FROM oven/bun:1 AS builder
 
 WORKDIR /app
 
-# Copy package. json only (không cần bun.lockb)
-COPY package. json ./
+# Copy package files
+COPY package.json bun.lock* ./
 
-# Install dependencies (Bun sẽ tự tạo lockfile)
-RUN bun install --frozen-lockfile=false
+# Install dependencies
+RUN bun install --frozen-lockfile --production=false
 
 # Copy source code
 COPY . .
@@ -33,5 +33,6 @@ ENV NODE_ENV=production
 ENV PORT=3000
 ENV HOST=0.0.0.0
 
-# Start with Node.js (vì adapter-node tạo Node server)
+# Start the application with Node.js
+# (adapter-node tạo ra Node.js server, không phải Bun server)
 CMD ["node", "build/index.js"]
