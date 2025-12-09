@@ -5,14 +5,19 @@ services:
   - name: web
     # GitHub repository
     github:
-      repo: your-username/your-repo
+      repo:  your-username/your-repo
       branch: main
       deploy_on_push: true
 
-    # Sử dụng Dockerfile
-    dockerfile_path: Dockerfile
+    # ❌ XÓA dòng dockerfile_path
+    # Thay vào đó dùng buildpack
+    environment_slug: node-js
 
-    # Port  app listen
+    # Build và run commands
+    build_command: npm install && npm run build
+    run_command: node build/index.js
+
+    # Port app listen
     http_port: 3000
 
     # Instance configuration
@@ -37,8 +42,4 @@ services:
       - key: NODE_ENV
         value: "production"
       - key: PORT
-        value:  "3000"
-      - key: HOST
-        value:  "0.0.0.0"
-      # - key: DATABASE_URL
-      #   value: "your-database-url"
+        value: "3000"
