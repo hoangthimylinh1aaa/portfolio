@@ -17,6 +17,10 @@ const config = {
       envPrefix: '',
       polyfill: true,
     }),
+    prerender: {
+      handleHttpError: 'warn',
+      handleMissingId: 'warn',
+    },
   },
 };
 

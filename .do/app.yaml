@@ -1,5 +1,5 @@
-name: sveltekit-portfolio
-region: sgp
+name: portfolio
+region: sgp1
 
 services:
   - name: web
@@ -14,7 +14,7 @@ services:
     environment_slug: node-js
 
     # Build và run commands
-    build_command: npm install && npm run build
+    build_command: bun install && bun run build
     run_command: node build/index.js
 
     # Port app listen
@@ -42,4 +42,4 @@ services:
       - key: NODE_ENV
         value: "production"
       - key: PORT
-        value: "3000"
+        value: "8080"
