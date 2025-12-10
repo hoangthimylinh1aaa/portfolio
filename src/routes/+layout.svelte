@@ -2,11 +2,12 @@
   import '../app.css';
   import '$lib/i18n';
   import { isLoading } from 'svelte-i18n';
+  import favicon from '$lib/assets/favicon.svg';
 </script>
 
 <svelte:head>
   <!-- Basic favicon -->
-  <link rel="icon" href="/src/lib/assets/favicon.svg" />
+  <link rel="icon" href={favicon} />
 
   <!-- PNG favicons for browsers -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
