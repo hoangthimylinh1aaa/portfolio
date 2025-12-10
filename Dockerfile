@@ -1,38 +1,25 @@
-# Build stage
-FROM oven/bun:1 AS builder
-
+FROM oven/bun:1 as base
 WORKDIR /app
-
-# Copy package files
-COPY package.json bun.lock* ./
 
 # Install dependencies
-RUN bun install --frozen-lockfile --production=false
+COPY package.json bun.lockb ./
+RUN bun install --frozen-lockfile
 
-# Copy source code
+# Copy source
 COPY . .
 
-# Build the application
+# Build
 RUN bun run build
 
-# Production stage
+# Production
 FROM oven/bun:1-slim
-
 WORKDIR /app
 
-# Copy built application
-COPY --from=builder /app/build ./build
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
+COPY --from=base /app/build ./build
+COPY --from=base /app/package.json ./
+COPY --from=base /app/node_modules ./node_modules
 
-# Expose the port
-EXPOSE 8080
+ENV PORT=3000
+EXPOSE 3000
 
-# Set environment variables
-ENV NODE_ENV=production
-ENV PORT=8080
-ENV HOST=0.0.0.0
-
-# Start the application with Node.js
-# (adapter-node tạo ra Node.js server, không phải Bun server)
-CMD ["node", "build/index.js"]
+CMD ["bun", "run", "build/index.js"]
