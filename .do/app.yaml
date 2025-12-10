@@ -3,43 +3,36 @@ region: sgp1
 
 services:
   - name: web
-    # GitHub repository
     github:
-      repo:  your-username/your-repo
+      repo: hoangthimylinh1aaa/portfolio
       branch: main
       deploy_on_push: true
 
-    # ❌ XÓA dòng dockerfile_path
-    # Thay vào đó dùng buildpack
-    environment_slug: node-js
-
-    # Build và run commands
     build_command: bun install && bun run build
     run_command: node build/index.js
 
-    # Port app listen
+    environment_slug: node-js
+    instance_count: 1
+    instance_size_slug: basic-xxs
+
     http_port: 8080
 
-    # Instance configuration
-    instance_count: 1
-    instance_size_slug:  basic-xxs
+    envs:
+      - key: PORT
+        value: "3000"
+      - key:  HOST
+        value: "0.0.0.0"
+      - key: ORIGIN
+        value: "https://portfolio-rf64t.ondigitalocean.app"
+      - key: PROTOCOL_HEADER
+        value: "x-forwarded-proto"
+      - key: HOST_HEADER
+        value: "x-forwarded-host"
 
-    # Routes
-    routes:
-      - path: /
-
-    # Health check (optional)
     health_check:
       http_path: /
       initial_delay_seconds: 10
       period_seconds: 10
-      timeout_seconds: 3
+      timeout_seconds: 5
       success_threshold: 1
       failure_threshold: 3
-
-    # Environment variables
-    envs:
-      - key: NODE_ENV
-        value: "production"
-      - key: PORT
-        value: "8080"
