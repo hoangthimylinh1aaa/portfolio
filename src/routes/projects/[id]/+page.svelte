@@ -34,19 +34,6 @@
             use:motion
             class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-gaming font-semibold mb-8 transition-colors group"
           >
-            <svg
-              class="w-5 h-5 group-hover:-translate-x-1 transition-transform"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
             {$_('projects.backToProjects')}
           </a>
         </Motion>
@@ -123,7 +110,7 @@
                 class="px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/50 rounded-lg"
               >
                 <p class="text-cyan-300 font-gaming font-semibold text-sm">
-                  {$_('projects.teamSize')}: {$_(`projects.items.${project.id}. teamSize`)}
+                  {$_('projects.teamSize')}: {$_(`projects.items.${project.id}.teamSize`)}
                   {$_('projects.people')}
                 </p>
               </div>
